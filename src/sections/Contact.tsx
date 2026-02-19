@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Send, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Twitter, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
 export function Contact() {
@@ -55,9 +55,8 @@ export function Contact() {
       <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
-          className={`max-w-3xl mx-auto mb-16 text-center transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`max-w-3xl mx-auto mb-16 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
             Contacto
@@ -66,17 +65,16 @@ export function Contact() {
             Inicia tu <span className="text-gradient-gold">Transformación</span>
           </h2>
           <p className="mt-6 text-lg text-gray-400">
-            Agenda una consulta gratuita y descubre cómo la inteligencia artificial
-            puede revolucionar tus operaciones legales y financieras.
+            Agenda una consulta técnica-estratégica. Valoramos nuestro tiempo y el tuyo:
+            las consultas se abonan por adelantado y se descuentan del presupuesto final del proyecto.
           </p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Contact Info */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+            className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <div className="space-y-8">
               {/* Contact Cards */}
@@ -139,9 +137,8 @@ export function Contact() {
 
           {/* Contact Form */}
           <div
-            className={`transition-all duration-1000 delay-400 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <form onSubmit={handleSubmit} className="p-8 rounded-2xl border border-gold/20 bg-black/50">
               <div className="space-y-6">
@@ -216,6 +213,52 @@ export function Contact() {
         </div>
       </div>
 
+      {/* Global Wallet / Payment Section */}
+      <div className="mt-20 pt-12 border-t border-white/5">
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-8">
+            <Wallet className="w-5 h-5 text-gold" />
+            <h3 className="text-xl font-serif text-white tracking-tight">Canales de Pago & Billeteras Oficiales</h3>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-500">
+            <div className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-gold/50 transition-colors">
+                <span className="text-blue-500 font-bold text-lg">P</span>
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Cuentas Globales</p>
+                <p className="text-white font-serif group-hover:text-gold transition-colors">PayPal LexAI</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-sky-blue/50 transition-colors">
+                <span className="text-sky-blue font-bold text-lg">M</span>
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Operaciones Locales</p>
+                <p className="text-white font-serif group-hover:text-sky-blue transition-colors">Mercado Pago AR</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-gold/50 transition-colors">
+                <CreditCard className="w-5 h-5 text-gold" />
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Web3 Payment</p>
+                <p className="text-white font-serif group-hover:text-gold transition-colors">Crypto Wallets (ETH / USDT)</p>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-12 text-[10px] text-gray-600 uppercase tracking-[0.3em] font-medium text-center">
+            LexAI Global Institutional Node • 2026
+          </p>
+        </div>
+      </div>
+
       {/* Success Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent className="bg-black border-gold/30 text-white">
@@ -230,12 +273,12 @@ export function Contact() {
           </DialogHeader>
           <div className="mt-4 p-4 rounded-lg bg-sky-blue/10 border border-sky-blue/30">
             <p className="text-sky-blue text-sm">
-              Mientras tanto, puedes explorar nuestros recursos sobre tokenización
-              y smart contracts en nuestro blog.
+              En breve recibirás un link de pago (PayPal / Mercado Pago) para confirmar la sesión oficial.
+              Recuerda que este monto se acredita a tu cuenta para el desarrollo final.
             </p>
           </div>
         </DialogContent>
       </Dialog>
-    </section>
+    </section >
   );
 }

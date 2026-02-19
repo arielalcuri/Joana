@@ -1,11 +1,13 @@
 import { Scale, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const footerLinks = {
   servicios: [
-    { label: 'Tokenización', href: '#servicios' },
-    { label: 'Automatización', href: '#servicios' },
-    { label: 'Smart Contracts', href: '#servicios' },
-    { label: 'Asesoría Legal', href: '#servicios' },
+    { label: 'Tokenización', href: '/servicio/tokenizacion' },
+    { label: 'Automatización', href: '/servicio/automatizacion' },
+    { label: 'Smart Contracts', href: '/servicio/smart-contracts' },
+    { label: 'Asesoría Legal', href: '/servicio/asesoria-legal' },
+    { label: 'Trazabilidad', href: '/servicio/trazabilidad' },
   ],
   empresa: [
     { label: 'Sobre Nosotros', href: '#nosotros' },
@@ -56,12 +58,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.servicios.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-gold transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,12 +76,12 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-gold transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -92,13 +94,13 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-gold transition-colors inline-flex items-center gap-1"
                   >
                     {link.label}
                     <ExternalLink className="w-3 h-3" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

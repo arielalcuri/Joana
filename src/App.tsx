@@ -1,22 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
-import { Hero } from '@/sections/Hero';
-import { Services } from '@/sections/Services';
-import { About } from '@/sections/About';
-import { Contact } from '@/sections/Contact';
+import { Home } from '@/pages/Home';
+import { ServiceDetail } from '@/pages/ServiceDetail';
 import { Footer } from '@/sections/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
-      <Navigation />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-black">
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/servicio/:id" element={<ServiceDetail />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

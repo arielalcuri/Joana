@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
-import { Coins, Workflow, FileCode, ArrowUpRight } from 'lucide-react';
+import { Workflow, ArrowUpRight, Scale, BarChart3, Database } from 'lucide-react';
 
 interface Service {
+  id: string;
   icon: React.ReactNode;
   title: string;
   subtitle: string;
@@ -13,41 +15,58 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <Coins className="w-8 h-8" />,
-    title: 'Tokenización',
-    subtitle: 'Innovación Disruptiva',
-    description: 'Transforma activos reales en tokens digitales mediante blockchain. Democratizamos el acceso a inversiones premium.',
+    id: 'asesoria',
+    icon: <Scale className="w-8 h-8" />,
+    title: 'Asesoramiento Técnico-Legal',
+    subtitle: 'Revisión & Análisis Jurídico',
+    description: 'Consultoría legal especializada en tecnología y mediaciones. Análisis profundo revisado por hora para máxima precisión.',
     features: [
-      'Tokenización de activos inmobiliarios',
-      'Security Tokens compliant',
-      'Fractional ownership',
-      'Liquidez instantánea',
+      'Mediaciones y Resolución de Conflictos',
+      'Análisis y Revisión Legal Estratégica',
+      'Dictámenes Jurídicos de Complejidad',
+      'Auditoría en Cumplimiento Normativo',
+    ],
+    gradient: 'from-sky-blue/20 via-gold/5 to-transparent',
+  },
+  {
+    id: 'asesoria-financiera',
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: 'Asesoramiento Financiero',
+    subtitle: 'Tokenización & Smart Contracts',
+    description: 'Estructuramos tu proyecto financiero sobre la base de la economía digital y los contratos inteligentes autoejecutables.',
+    features: [
+      'Modelos de Tokenización de Activos',
+      'Arquitectura de Smart Contracts',
+      'Planificación Financiera Digital',
+      'Despliegue de Economía 3.0',
     ],
     gradient: 'from-gold/20 via-gold/5 to-transparent',
   },
   {
+    id: 'automatizacion',
     icon: <Workflow className="w-8 h-8" />,
-    title: 'Automatización',
-    subtitle: 'Procesos Inteligentes',
-    description: 'Optimiza tus operaciones legales y financieras con flujos de trabajo automatizados impulsados por IA.',
+    title: 'Innovación & Automatización',
+    subtitle: 'Optimización Disruptiva',
+    description: 'Revolucionamos tus procesos mediante la automatización inteligente y el control absoluto de trazabilidad.',
     features: [
-      'Workflows inteligentes',
-      'Análisis predictivo',
-      'Reducción de costos 70%',
-      'Integración seamless',
+      'Automatización de Procesos Críticos',
+      'Control de Trazabilidad Inmutable',
+      'Infraestructura de Datos Distribuida',
+      'Sistemas de Auditoría In-Process',
     ],
     gradient: 'from-sky-blue/20 via-sky-blue/5 to-transparent',
   },
   {
-    icon: <FileCode className="w-8 h-8" />,
-    title: 'Smart Contracts',
-    subtitle: 'Contratos del Futuro',
-    description: 'Contratos autoejecutables en blockchain que garantizan cumplimiento automático y transparencia total.',
+    id: 'gestor-bloques',
+    icon: <Database className="w-8 h-8" />,
+    title: 'Gestor de Producción en Bloques',
+    subtitle: 'Agente Ejecutiva Blockchain',
+    description: 'Un gestor avanzado para la producción y validación de bloques, asegurando la eficiencia en redes distribuidas.',
     features: [
-      'Auditoría de seguridad',
-      'Escrow automatizado',
-      'Multi-firma avanzada',
-      'Escalabilidad garantizada',
+      'Validación de Nodos Institucionales',
+      'Gestión de Producción Logística',
+      'Monitoreo de Redes en Tiempo Real',
+      'Optimización de Gas y Recursos',
     ],
     gradient: 'from-gold/20 via-sky-blue/10 to-transparent',
   },
@@ -55,7 +74,7 @@ const services: Service[] = [
 
 export function Services() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false]);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false, false, false]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -113,16 +132,16 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
+              id={service.id}
               data-index={index}
-              className={`transition-all duration-700 ${
-                visibleCards[index]
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-12'
-              }`}
+              className={`transition-all duration-700 scroll-mt-24 ${visibleCards[index]
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-12'
+                }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <Card className="relative h-full p-8 overflow-hidden transition-all duration-500 border group bg-black/50 border-gold/20 hover:border-gold/50 hover:shadow-gold/20">
@@ -138,7 +157,9 @@ export function Services() {
                     <div className="p-4 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 text-gold group-hover:shadow-gold/30 transition-shadow duration-500">
                       {service.icon}
                     </div>
-                    <ArrowUpRight className="w-6 h-6 transition-all duration-300 text-gold/50 group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    <Link to={`/servicio/${service.id}`}>
+                      <ArrowUpRight className="w-8 h-8 transition-all duration-300 text-gold/50 group-hover:text-gold group-hover:scale-110" />
+                    </Link>
                   </div>
 
                   {/* Title */}
@@ -173,6 +194,7 @@ export function Services() {
                   <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                   <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 </div>
+                <Link to={`/servicio/${service.id}`} className="absolute inset-0 z-20" />
               </Card>
             </div>
           ))}
@@ -188,7 +210,7 @@ export function Services() {
             className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors"
           >
             <span className="border-b border-gold/50 hover:border-gold">
-              Agenda una consulta estratégica
+              Inicia tu consulta estratégica (Costo bonificable del proyecto final)
             </span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
