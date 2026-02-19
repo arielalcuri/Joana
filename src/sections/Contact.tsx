@@ -1,0 +1,241 @@
+import { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Mail, Phone, MapPin, Send, Linkedin, Twitter } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+
+export function Contact() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+  });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowDialog(true);
+    setFormData({ name: '', email: '', company: '', message: '' });
+  };
+
+  return (
+    <section
+      ref={sectionRef}
+      id="contacto"
+      className="relative w-full py-24 sm:py-32 bg-black overflow-hidden"
+    >
+      {/* Background Gradient */}
+      <div className="absolute inset-0">
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-blue/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div
+          className={`max-w-3xl mx-auto mb-16 text-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
+            Contacto
+          </span>
+          <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif">
+            Inicia tu <span className="text-gradient-gold">Transformación</span>
+          </h2>
+          <p className="mt-6 text-lg text-gray-400">
+            Agenda una consulta gratuita y descubre cómo la inteligencia artificial
+            puede revolucionar tus operaciones legales y financieras.
+          </p>
+        </div>
+
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Contact Info */}
+          <div
+            className={`transition-all duration-1000 delay-200 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+            }`}
+          >
+            <div className="space-y-8">
+              {/* Contact Cards */}
+              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gold/10 text-gold">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Email</h3>
+                    <p className="mt-1 text-gray-400">contacto@lexai.com</p>
+                    <p className="text-gray-400">urgente@lexai.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gold/10 text-gold">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Teléfono</h3>
+                    <p className="mt-1 text-gray-400">+34 900 123 456</p>
+                    <p className="text-gray-400">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gold/10 text-gold">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Oficinas</h3>
+                    <p className="mt-1 text-gray-400">Madrid, España</p>
+                    <p className="text-gray-400">Nueva York, USA</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a
+                  href="#"
+                  className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
+                >
+                  <Twitter className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div
+            className={`transition-all duration-1000 delay-400 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            }`}
+          >
+            <form onSubmit={handleSubmit} className="p-8 rounded-2xl border border-gold/20 bg-black/50">
+              <div className="space-y-6">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-gray-300">
+                      Nombre completo
+                    </Label>
+                    <Input
+                      id="name"
+                      placeholder="Tu nombre"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-gray-300">
+                      Email
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="tu@email.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="company" className="text-gray-300">
+                    Empresa
+                  </Label>
+                  <Input
+                    id="company"
+                    placeholder="Nombre de tu empresa"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-gray-300">
+                    Mensaje
+                  </Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Cuéntanos sobre tu proyecto..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="min-h-[150px] bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20 resize-none"
+                    required
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full group bg-gold text-black hover:bg-gold-light hover:shadow-gold transition-all duration-300"
+                >
+                  Enviar Mensaje
+                  <Send className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="bg-black border-gold/30 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-serif text-gold">
+              ¡Mensaje Enviado!
+            </DialogTitle>
+            <DialogDescription className="text-gray-400">
+              Gracias por contactarnos. Nuestro equipo de IA ya está analizando tu consulta
+              y te responderemos en menos de 24 horas.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 p-4 rounded-lg bg-sky-blue/10 border border-sky-blue/30">
+            <p className="text-sky-blue text-sm">
+              Mientras tanto, puedes explorar nuestros recursos sobre tokenización
+              y smart contracts en nuestro blog.
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </section>
+  );
+}
