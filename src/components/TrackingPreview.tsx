@@ -1,15 +1,10 @@
 import { useState } from 'react';
 import {
     Search,
-    MapPin,
     Package,
-    Globe,
-    CheckCircle2,
     ShieldCheck,
     Thermometer,
     Droplets,
-    ExternalLink,
-    ChevronRight,
     FileBadge
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';

@@ -61,15 +61,13 @@ class CorreoArgentinoService {
     async getTrackingHistory(trackingNumber: string): Promise<CATrackingResponse[] | null> {
         try {
             // El endpoint /tracking acepta un array de trackingNumbers
-            const response = await fetch(`${this.baseUrl}/tracking`, {
+            const response = await fetch(`${this.baseUrl}/tracking?trackingNumbers=${trackingNumber}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Apikey ${this.apiKey}`,
                     'agreement': this.agreement,
                     'Content-Type': 'application/json'
-                },
-                // En algunos casos de la API v2, se envían como parámetros de URL
-                // o como un body en el GET (dependiendo de la configuración del middleware)
+                }
             });
 
             if (!response.ok) throw new Error('Error al consultar tracking');
