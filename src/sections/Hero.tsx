@@ -39,7 +39,7 @@ export function Hero() {
           className={`text-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
-          <span className="block text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl font-serif text-gradient-gold">
+          <span className="block text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl font-serif text-gradient-gold py-4 px-2">
             Joana Del Fabro
           </span>
           <span className="block mt-4 text-xl tracking-widest uppercase text-gold/80 sm:text-2xl md:text-3xl">
