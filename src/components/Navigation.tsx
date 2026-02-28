@@ -18,7 +18,7 @@ const navLinks = [
       { label: 'Asesoramiento Legal', href: '/servicio/asesoria' },
       { label: 'Asesoramiento Financiero', href: '/servicio/asesoria-financiera' },
       { label: 'Innovación & Automatización', href: '/servicio/automatizacion' },
-      { label: 'Gestor de Bloques', href: '/servicio/gestor-bloques' },
+      { label: 'Marketplace de Genética', href: '/servicio/marketplace-genetica' },
     ]
   },
   { label: 'Eventos', href: '/#eventos' },
@@ -80,7 +80,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               link.sublinks ? (
                 <DropdownMenu key={link.label}>

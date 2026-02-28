@@ -22,7 +22,7 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-32 pb-12 sm:px-6 lg:px-8">
         {/* Badge */}
         <div
           className={`flex items-center gap-2 px-4 py-2 mb-8 border rounded-full border-gold/30 bg-gold/5 backdrop-blur-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -62,19 +62,21 @@ export function Hero() {
           className={`flex flex-col gap-4 mt-12 sm:flex-row transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
+          {/* Updated CTA as requested */}
           <Button
             size="lg"
             className="group px-8 py-6 text-lg font-medium transition-all duration-300 bg-gold text-black hover:bg-gold-light hover:shadow-gold"
           >
-            Consulta Gratuita
+            Conoce Nuestros Servicios
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="px-8 py-6 text-lg font-medium transition-all duration-300 border-gold/50 text-gold hover:bg-gold/10 hover:border-gold"
+            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Conoce Nuestros Servicios
+            Hablemos de tu Proyecto
           </Button>
         </div>
 

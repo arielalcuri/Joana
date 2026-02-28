@@ -21,17 +21,17 @@ const serviceData = {
         fullContent: 'En LexAI no hacemos asesoría genérica. Nuestro equipo jurídico está capacitado en derecho informático y blockchain, permitiendo una revisión que comprende tanto el código legal como el código fuente. Facilitamos mediaciones que evitan litigios costosos mediante el entendimiento técnico.'
     },
     'asesoria-financiera': {
-        title: 'Asesoramiento Financiero Web3',
-        subtitle: 'Tokenización & Smart Contracts',
+        title: 'Asesoramiento Financiero',
+        subtitle: 'Dinero Digital & Smart Contracts',
         icon: <BarChart3 className="w-12 h-12" />,
-        description: 'Estructuración profesional de proyectos financieros basados en activos digitales. Te ayudamos a transformar tu modelo de negocio mediante tokenización.',
+        description: 'Construimos tu infraestructura financiera sobre la base del dinero digital y los contratos inteligentes autoejecutables.',
         details: [
             'Modelos de Tokenización: Diseño de activos inmobiliarios, financieros y arte.',
             'Smart Contracts Framework: Definición de reglas autoejecutables seguras.',
-            'Arquitectura Financiera: Estructuración de flujos de pago y liquidez.',
-            'DeFi & Crowdfunding: Implementación de modelos de financiamiento participativo.'
+            'Planificación Financiera Digital: Estructuración de flujos de pago y liquidez.',
+            'Dinero 3.0: Implementación de modelos DeFi y Crowdfunding.'
         ],
-        fullContent: 'El asesoramiento financiero es el primer paso hacia la tokenización real. Analizamos la viabilidad de tu proyecto, diseñamos el tokenomics y establecemos la base para los contratos inteligentes que gobernarán tus activos en la blockchain.'
+        fullContent: 'El dinero digital es la base de la nueva economía. No solo asesoramos en finanzas; construimos infraestructuras donde cada transacción es segura, automática y transparente mediante contratos inteligentes.'
     },
     'automatizacion': {
         title: 'Innovación & Automatización',
@@ -46,18 +46,18 @@ const serviceData = {
         ],
         fullContent: 'La innovación no es una opción, es una necesidad. LexAI diseña infraestructuras que garantizan que cada paso de tu proceso sea auditable, transparente y automático, eliminando el error humano y maximizando la trazabilidad.'
     },
-    'gestor-bloques': {
-        title: 'Gestor de Producción en Bloques',
-        subtitle: 'Agente Ejecutiva Blockchain',
+    'marketplace-genetica': {
+        title: 'Marketplace de Genética',
+        subtitle: 'Trazabilidad Blockchain (NFT)',
         icon: <Database className="w-12 h-12" />,
-        description: 'Gestión técnica y estratégica de la producción de bloques en redes distribuidas. Actuamos como tu agente ejecutiva en el ecosistema blockchain.',
+        description: 'Desarrollamos plataformas de comercialización de semen y embriones donde la historia clínica y genealógica sea inalterable.',
         details: [
-            'Gestión de Producción: Monitoreo y validación de bloques en tiempo real.',
-            'Nodos Institucionales: Administración de nodos verificados para empresas.',
-            'Optimización de Gas: Gestión eficiente de costos transaccionales.',
-            'Seguridad Operativa: Blindaje de la infraestructura de validación.'
+            'Pasaporte Digital (NFT): Identificación inmutable para cada unidad genética.',
+            'Certificación de Sanidad: Registro de libre de enfermedades verificable.',
+            'Eficiencia de Conversión (RFI): Pruebas de rendimiento integradas en el historial.',
+            'Huella de Carbono: Seguimiento de impacto ambiental del animal de origen.'
         ],
-        fullContent: 'Como gestores de producción en bloques, aseguramos que tu participación en redes descentralizadas sea eficiente y segura. Nos encargamos de la complejidad técnica para que tu empresa solo reciba los beneficios de la infraestructura distribuida.'
+        fullContent: 'Nuestro diferencial radica en la creación de un ecosistema de confianza para el sector ganadero. Cada pajuela o embrión cuenta con un Pasaporte Digital que incluye datos de rendimiento financiero basados en proyecciones de mercado externo.'
     }
 };
 
@@ -147,8 +147,10 @@ export function ServiceDetail() {
                         de soluciones disruptivas.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Button size="lg" className="bg-gold text-black px-8">Agendar Consulta (Paga)</Button>
-                        <Button size="lg" variant="outline" className="border-gold text-gold px-8 italic">Consultas descontables del presupuesto</Button>
+                        <Link to="/#contacto">
+                            <Button size="lg" className="bg-gold text-black px-8">Iniciar Consulta Estratégica</Button>
+                        </Link>
+                        <Button size="lg" variant="outline" className="border-gold text-gold px-8 italic">Costo bonificable del proyecto final</Button>
                     </div>
                 </div>
             </div>
