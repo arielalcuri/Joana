@@ -46,18 +46,18 @@ const serviceData = {
         ],
         fullContent: 'La innovación no es una opción, es una necesidad. LexAI diseña infraestructuras que garantizan que cada paso de tu proceso sea auditable, transparente y automático, eliminando el error humano y maximizando la trazabilidad.'
     },
-    'marketplace-genetica': {
-        title: 'Marketplace de Genética',
-        subtitle: 'Trazabilidad Blockchain (NFT)',
+    'gestor-bloques': {
+        title: 'Gestor de Producción en Bloques',
+        subtitle: 'Agente Ejecutiva Blockchain',
         icon: <Database className="w-12 h-12" />,
-        description: 'Desarrollamos plataformas de comercialización de semen y embriones donde la historia clínica y genealógica sea inalterable.',
+        description: 'Gestión técnica y estratégica de la producción de bloques en redes distribuidas. Actuamos como tu agente ejecutiva en el ecosistema blockchain.',
         details: [
-            'Pasaporte Digital (NFT): Identificación inmutable para cada unidad genética.',
-            'Certificación de Sanidad: Registro de libre de enfermedades verificable.',
-            'Eficiencia de Conversión (RFI): Pruebas de rendimiento integradas en el historial.',
-            'Huella de Carbono: Seguimiento de impacto ambiental del animal de origen.'
+            'Gestión de Producción: Monitoreo y validación de bloques en tiempo real.',
+            'Nodos Institucionales: Administración de nodos verificados para empresas.',
+            'Optimización de Gas: Gestión eficiente de costos transaccionales.',
+            'Seguridad Operativa: Blindaje de la infraestructura de validación.'
         ],
-        fullContent: 'Nuestro diferencial radica en la creación de un ecosistema de confianza para el sector ganadero. Cada pajuela o embrión cuenta con un Pasaporte Digital que incluye datos de rendimiento financiero basados en proyecciones de mercado externo.'
+        fullContent: 'Como gestores de producción en bloques, aseguramos que tu participación en redes descentralizadas sea eficiente y segura. Nos encargamos de la complejidad técnica para que tu empresa solo reciba los beneficios de la infraestructura distribuida.'
     }
 };
 

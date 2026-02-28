@@ -18,7 +18,7 @@ const navLinks = [
       { label: 'Asesoramiento Legal', href: '/servicio/asesoria' },
       { label: 'Asesoramiento Financiero', href: '/servicio/asesoria-financiera' },
       { label: 'Innovación & Automatización', href: '/servicio/automatizacion' },
-      { label: 'Marketplace de Genética', href: '/servicio/marketplace-genetica' },
+      { label: 'Gestor de Bloques', href: '/servicio/gestor-bloques' },
     ]
   },
   { label: 'Eventos', href: '/#eventos' },
