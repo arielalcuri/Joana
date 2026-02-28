@@ -72,7 +72,7 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        gold: "0 0 20px hsl(45 100% 50% / 0.5), 0 0 40px hsl(45 100% 50% / 0.3)",
+        gold: "0 0 20px hsl(32 40% 55% / 0.5), 0 0 40px hsl(32 40% 55% / 0.3)",
         "sky-blue": "0 0 20px hsl(195 100% 65% / 0.5), 0 0 40px hsl(195 100% 65% / 0.3)",
       },
       keyframes: {

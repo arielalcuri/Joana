@@ -29,7 +29,7 @@ export function TokenizationPreview() {
     const investment = tokensToBuy * assetData.tokenPrice;
 
     return (
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-background">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="text-center mb-16">
                     <span className="text-gold text-sm tracking-widest uppercase mb-2 block">Demo de Plataforma</span>
@@ -43,7 +43,7 @@ export function TokenizationPreview() {
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Asset Card */}
-                    <div className="bg-zinc-900/50 border border-gold/20 rounded-3xl overflow-hidden backdrop-blur-md shadow-2xl">
+                    <div className="bg-background/50 border border-gold/20 rounded-3xl overflow-hidden backdrop-blur-md shadow-2xl">
                         <div className="relative h-64 bg-zinc-800 flex items-center justify-center group">
                             <Building2 className="w-24 h-24 text-gold/20 group-hover:scale-110 transition-transform duration-700" />
                             <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30 flex items-center gap-2">
@@ -78,11 +78,11 @@ export function TokenizationPreview() {
                                     <span className="text-gray-400">Tokens Vendidos</span>
                                     <span className="text-white font-bold">{progress.toFixed(1)}%</span>
                                 </div>
-                                <Progress value={progress} className="h-2 bg-zinc-800" />
+                                <Progress value={progress} className="h-2 bg-background/80" />
                                 <p className="text-[10px] text-gray-500 text-right">38,500 / 50,000 Tokens</p>
                             </div>
 
-                            <div className="bg-black/40 border border-gold/10 p-6 rounded-2xl">
+                            <div className="bg-background/40 border border-gold/10 p-6 rounded-2xl">
                                 <div className="flex items-center justify-between mb-4">
                                     <p className="text-sm text-gray-300">Tu Inversión</p>
                                     <div className="flex items-center gap-4">
@@ -145,7 +145,7 @@ export function TokenizationPreview() {
                                 <h4 className="text-xl font-bold text-white font-serif">Gobernanza Digital</h4>
                             </div>
 
-                            <div className="bg-black/60 p-6 rounded-2xl border border-white/5">
+                            <div className="bg-background/60 p-6 rounded-2xl border border-white/5">
                                 <p className="text-sm font-medium text-white mb-4">Votación Activa #024: ¿Reinversión en eficiencia energética?</p>
                                 {!hasVoted ? (
                                     <div className="grid grid-cols-2 gap-4">
@@ -170,12 +170,12 @@ export function TokenizationPreview() {
 
                         {/* Market Stats */}
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="p-6 bg-zinc-900/50 rounded-2xl border border-white/5 text-center">
+                            <div className="p-6 bg-background/50 rounded-2xl border border-white/5 text-center">
                                 <TrendingUp className="w-5 h-5 text-green-500 mx-auto mb-2" />
                                 <p className="text-2xl font-bold text-white">+12%</p>
                                 <p className="text-[10px] text-gray-500 uppercase italic">Plusvalía Anual</p>
                             </div>
-                            <div className="p-6 bg-zinc-900/50 rounded-2xl border border-white/5 text-center">
+                            <div className="p-6 bg-background/50 rounded-2xl border border-white/5 text-center">
                                 <Users className="w-5 h-5 text-sky-blue mx-auto mb-2" />
                                 <p className="text-2xl font-bold text-white">412</p>
                                 <p className="text-[10px] text-gray-500 uppercase italic">Inversores</p>

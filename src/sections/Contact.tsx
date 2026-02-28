@@ -44,7 +44,7 @@ export function Contact() {
     <section
       ref={sectionRef}
       id="contacto"
-      className="relative w-full py-24 sm:py-32 bg-black overflow-hidden"
+      className="relative w-full py-24 sm:py-32 bg-background overflow-hidden"
     >
       {/* Background Gradient */}
       <div className="absolute inset-0">
@@ -78,7 +78,7 @@ export function Contact() {
           >
             <div className="space-y-8">
               {/* Contact Cards */}
-              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+              <div className="p-6 rounded-xl border border-gold/20 bg-background/50 hover:border-gold/40 transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-gold/10 text-gold">
                     <Mail className="w-6 h-6" />
@@ -91,7 +91,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+              <div className="p-6 rounded-xl border border-gold/20 bg-background/50 hover:border-gold/40 transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-gold/10 text-gold">
                     <Phone className="w-6 h-6" />
@@ -104,7 +104,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-gold/20 bg-black/50 hover:border-gold/40 transition-colors">
+              <div className="p-6 rounded-xl border border-gold/20 bg-background/50 hover:border-gold/40 transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-gold/10 text-gold">
                     <MapPin className="w-6 h-6" />
@@ -140,7 +140,7 @@ export function Contact() {
             className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
           >
-            <form onSubmit={handleSubmit} className="p-8 rounded-2xl border border-gold/20 bg-black/50">
+            <form onSubmit={handleSubmit} className="p-8 rounded-2xl border border-gold/20 bg-background/50">
               <div className="space-y-6">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
@@ -152,7 +152,7 @@ export function Contact() {
                       placeholder="Tu nombre"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                      className="bg-background/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
                       required
                     />
                   </div>
@@ -166,7 +166,7 @@ export function Contact() {
                       placeholder="tu@email.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                      className="bg-background/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
                       required
                     />
                   </div>
@@ -181,7 +181,7 @@ export function Contact() {
                     placeholder="Nombre de tu empresa"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
+                    className="bg-background/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20"
                   />
                 </div>
 
@@ -194,7 +194,7 @@ export function Contact() {
                     placeholder="Cuéntanos sobre tu proyecto..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[150px] bg-black/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20 resize-none"
+                    className="min-h-[150px] bg-background/50 border-gold/30 text-white placeholder:text-gray-600 focus:border-gold focus:ring-gold/20 resize-none"
                     required
                   />
                 </div>
@@ -261,7 +261,7 @@ export function Contact() {
 
       {/* Success Dialog */}
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
-        <DialogContent className="bg-black border-gold/30 text-white">
+        <DialogContent className="bg-background border-gold/30 text-white">
           <DialogHeader>
             <DialogTitle className="text-2xl font-serif text-gold">
               ¡Mensaje Enviado!

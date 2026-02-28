@@ -45,7 +45,7 @@ export function Events() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="eventos" className="relative w-full py-24 sm:py-32 bg-black overflow-hidden">
+        <section ref={sectionRef} id="eventos" className="relative w-full py-24 sm:py-32 bg-background overflow-hidden">
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
             </div>
@@ -82,17 +82,17 @@ export function Events() {
                     </Card>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="p-6 rounded-2xl border border-white/5 bg-zinc-900/50 text-center">
+                        <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center">
                             <Users className="w-8 h-8 text-gold mx-auto mb-2" />
                             <p className="text-2xl font-bold text-white">500+</p>
                             <p className="text-xs text-gray-500 uppercase tracking-widest">Participantes</p>
                         </div>
-                        <div className="p-6 rounded-2xl border border-white/5 bg-zinc-900/50 text-center">
+                        <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center">
                             <Globe className="w-8 h-8 text-gold mx-auto mb-2" />
                             <p className="text-2xl font-bold text-white">12+</p>
                             <p className="text-xs text-gray-500 uppercase tracking-widest">Hubs Globales</p>
                         </div>
-                        <div className="p-6 rounded-2xl border border-white/5 bg-zinc-900/50 text-center col-span-2">
+                        <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center col-span-2">
                             <Award className="w-8 h-8 text-gold mx-auto mb-2" />
                             <p className="text-2xl font-bold text-white tracking-tighter">Sponsors Estratégicos</p>
                             <p className="text-xs text-gray-500 uppercase tracking-widest">Visibilidad Multinacional</p>
@@ -114,7 +114,7 @@ export function Events() {
                                     alt={event.title}
                                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                                     <div className="mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

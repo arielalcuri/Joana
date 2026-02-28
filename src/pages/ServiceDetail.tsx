@@ -71,7 +71,7 @@ export function ServiceDetail() {
 
     if (!service) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-black text-white">
+            <div className="min-h-screen flex items-center justify-center bg-background text-white">
                 <div className="text-center">
                     <h2 className="text-3xl font-serif mb-4">Servicio no encontrado</h2>
                     <Link to="/">
@@ -83,7 +83,7 @@ export function ServiceDetail() {
     }
 
     return (
-        <div className="min-h-screen bg-black text-white pt-32 pb-20">
+        <div className="min-h-screen bg-background text-white pt-32 pb-20">
             <div className="max-w-4xl mx-auto px-4">
                 <Link to="/" className="inline-flex items-center text-gold hover:text-gold-light mb-12 transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" />
@@ -140,7 +140,7 @@ export function ServiceDetail() {
                     </div>
                 )}
 
-                <div className="text-center p-12 rounded-3xl bg-gradient-to-b from-black to-gold/5 border border-gold/10">
+                <div className="text-center p-12 rounded-3xl bg-gradient-to-b from-background to-gold/5 border border-gold/10">
                     <h3 className="text-2xl font-serif mb-6">¿Listo para llevar tu proyecto al siguiente nivel?</h3>
                     <p className="text-gray-400 mb-8 max-w-xl mx-auto">
                         Nuestro equipo de expertos en tecnología y derecho está listo para asesorarte en la implementación

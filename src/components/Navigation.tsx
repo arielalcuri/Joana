@@ -61,7 +61,7 @@ export function Navigation() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-black/90 backdrop-blur-lg border-b border-gold/20'
+        ? 'bg-background/90 backdrop-blur-lg border-b border-gold/20'
         : 'bg-transparent'
         }`}
     >
@@ -88,7 +88,7 @@ export function Navigation() {
                     {link.label}
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-black/90 border-gold/20 backdrop-blur-lg">
+                  <DropdownMenuContent className="bg-background/90 border-gold/20 backdrop-blur-lg">
                     {link.sublinks.map((sub) => (
                       <DropdownMenuItem key={sub.label} className="focus:bg-gold/10">
                         <Link
@@ -129,7 +129,7 @@ export function Navigation() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-full sm:w-80 bg-black border-l border-gold/20"
+              className="w-full sm:w-80 bg-background border-l border-gold/20"
             >
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}

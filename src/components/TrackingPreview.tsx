@@ -171,11 +171,11 @@ export function TrackingPreview() {
     };
 
     return (
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section className="py-24 bg-background relative overflow-hidden">
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 200 Q 200 100 400 200 T 750 200" stroke="hsl(45, 100%, 50%)" strokeWidth="1" strokeDasharray="5 5" />
-                    <path d="M50 200 Q 200 300 400 200 T 750 200" stroke="hsl(195, 100%, 65%)" strokeWidth="1" strokeDasharray="5 5" opacity="0.3" />
+                    <path d="M50 200 Q 200 100 400 200 T 750 200" stroke="hsl(var(--gold))" strokeWidth="1" strokeDasharray="5 5" />
+                    <path d="M50 200 Q 200 300 400 200 T 750 200" stroke="hsl(var(--sky-blue))" strokeWidth="1" strokeDasharray="5 5" opacity="0.3" />
                 </svg>
             </div>
 
@@ -198,7 +198,7 @@ export function TrackingPreview() {
                     </div>
                 </div>
 
-                <div className="bg-zinc-900/40 border border-gold/20 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
+                <div className="bg-background/40 border border-gold/20 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
                     <form onSubmit={(e) => handleSearch(e)} className="flex flex-col md:flex-row gap-4 mb-6">
                         <div className="relative flex-1">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/50 w-5 h-5" />
@@ -207,7 +207,7 @@ export function TrackingPreview() {
                                 value={trackingId}
                                 onChange={(e) => setTrackingId(e.target.value.toUpperCase())}
                                 placeholder="Introduzca Tracking ID (CA-... o LX-...)"
-                                className="w-full bg-black/50 border border-gold/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-gold transition-all"
+                                className="w-full bg-background/40 border border-gold/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-gold transition-all"
                             />
                         </div>
                         <Button
@@ -320,7 +320,7 @@ export function TrackingPreview() {
                                         </div>
                                     </div>
 
-                                    <div className="p-6 rounded-2xl bg-zinc-900 border border-white/5">
+                                    <div className="p-6 rounded-2xl bg-background border border-white/5">
                                         <h4 className="text-xs font-bold text-gray-400 uppercase mb-4">Información del Envío</h4>
                                         <div className="space-y-3">
                                             <div className="flex justify-between">

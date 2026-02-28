@@ -103,14 +103,14 @@ export function Services() {
     <section
       ref={sectionRef}
       id="servicios"
-      className="relative w-full py-24 sm:py-32 bg-black"
+      className="relative w-full py-24 sm:py-32 bg-background"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(45 100% 50%) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--gold)) 1px, transparent 0)`,
             backgroundSize: '40px 40px',
           }}
         />
@@ -144,7 +144,7 @@ export function Services() {
                 }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <Card className="relative h-full p-8 overflow-hidden transition-all duration-500 border group bg-black/50 border-gold/20 hover:border-gold/50 hover:shadow-gold/20">
+              <Card className="relative h-full p-8 overflow-hidden transition-all duration-500 border group bg-background/50 border-gold/20 hover:border-gold/50 hover:shadow-gold/20">
                 {/* Gradient Background */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

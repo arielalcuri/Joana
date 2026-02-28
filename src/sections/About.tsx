@@ -33,7 +33,7 @@ export function About() {
     <section
       ref={sectionRef}
       id="nosotros"
-      className="relative w-full py-24 sm:py-32 bg-black overflow-hidden"
+      className="relative w-full py-24 sm:py-32 bg-background overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-30">
@@ -58,9 +58,8 @@ export function About() {
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
           {/* Left Content */}
           <div
-            className={`transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+            className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
               Sobre Nosotros
@@ -103,15 +102,14 @@ export function About() {
 
           {/* Right Content - Stats */}
           <div
-            className={`transition-all duration-1000 delay-300 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+            className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="group relative p-8 rounded-2xl border border-gold/20 bg-black/50 hover:border-gold/50 transition-all duration-500"
+                  className="group relative p-8 rounded-2xl border border-gold/20 bg-background/50 hover:border-gold/50 transition-all duration-500"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   {/* Glow Effect */}
