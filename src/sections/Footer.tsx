@@ -113,7 +113,7 @@ export function Footer() {
         <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} LexAI. Todos los derechos reservados.
+              © {new Date().getFullYear()} Joana Del Fabro. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
               <span className="text-sm text-gray-500">
@@ -124,7 +124,7 @@ export function Footer() {
                 <div className="w-2 h-2 rounded-full bg-sky-blue" />
               </div>
               <span className="text-sm text-gray-500">
-                en Madrid & Nueva York
+                Argentina & Global Node
               </span>
             </div>
           </div>

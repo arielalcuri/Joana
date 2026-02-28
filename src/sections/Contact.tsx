@@ -85,8 +85,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">Email</h3>
-                    <p className="mt-1 text-gray-400">contacto@joanadelfabro.com</p>
-                    <p className="text-gray-400">urgente@joanadelfabro.com</p>
+                    <p className="mt-1 text-gray-400">contacto@joanadelfabro.com.ar</p>
                   </div>
                 </div>
               </div>
@@ -98,8 +97,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">Teléfono</h3>
-                    <p className="mt-1 text-gray-400">+34 900 123 456</p>
-                    <p className="text-gray-400">+1 (555) 123-4567</p>
+                    <p className="mt-1 text-gray-400">Próximamente</p>
                   </div>
                 </div>
               </div>
@@ -111,8 +109,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">Oficinas</h3>
-                    <p className="mt-1 text-gray-400">Madrid, España</p>
-                    <p className="text-gray-400">Nueva York, USA</p>
+                    <p className="mt-1 text-gray-400">Digital First / Presencial a convenir</p>
                   </div>
                 </div>
               </div>
@@ -120,16 +117,12 @@ export function Contact() {
               {/* Social Links */}
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/joanadelfabro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
                 >
                   <Linkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
-                >
-                  <Twitter className="w-6 h-6" />
                 </a>
               </div>
             </div>
