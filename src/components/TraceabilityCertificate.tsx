@@ -42,7 +42,7 @@ export function TraceabilityCertificate({ data, onClose }: CertificateProps) {
             });
 
             pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-            pdf.save(`Certificado-LexAI-${data.trackingId}.pdf`);
+            pdf.save(`Certificado-Joana Del Fabro-${data.trackingId}.pdf`);
         } catch (error) {
             console.error('Error generando PDF:', error);
         } finally {
@@ -164,7 +164,7 @@ export function TraceabilityCertificate({ data, onClose }: CertificateProps) {
                                 <div className="flex-1 w-full border-t border-gray-800 pt-4 text-center">
                                     <p className="text-[10px] font-mono text-gold/60 uppercase italic mb-1 tracking-tighter">BFA Institutional Node</p>
                                     <div className="h-8 flex items-center justify-center mb-1 text-white font-serif italic text-base opacity-80">
-                                        LexAI
+                                        Joana Del Fabro
                                     </div>
                                     <p className="text-[9px] text-gray-600 font-bold uppercase tracking-widest">Legal Systems Director</p>
                                     {data.verifiedAccount && (

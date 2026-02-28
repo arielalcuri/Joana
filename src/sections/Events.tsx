@@ -7,7 +7,7 @@ const events = [
         title: 'Buenos Aires Tech Week',
         date: 'Octubre 2025',
         location: 'Sede Central ITBA',
-        description: 'Presentación de LexAI ante el ecosistema startup regional. Pitching de tokenización de activos.',
+        description: 'Presentación de Joana Del Fabro ante el ecosistema startup regional. Pitching de tokenización de activos.',
         category: 'Conferencia',
         image: 'https://images.unsplash.com/photo-1540575861501-7ad0582282fb?auto=format&fit=crop&q=80',
     },
@@ -60,7 +60,7 @@ export function Events() {
                     </h2>
                     <p className="mt-6 text-lg text-gray-400">
                         Conectamos con los polos tecnológicos más importantes del mundo para mostrar el respaldo
-                        y la solidez de LexAI. Networking disruptivo y alianzas estratégicas.
+                        y la solidez de Joana Del Fabro. Networking disruptivo y alianzas estratégicas.
                     </p>
                 </div>
 

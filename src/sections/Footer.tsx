@@ -35,9 +35,9 @@ export function Footer() {
               <div className="p-2 rounded-lg bg-gold/10">
                 <Scale className="w-6 h-6 text-gold" />
               </div>
-              <span className="text-2xl font-bold font-serif">
-                <span className="text-white">Lex</span>
-                <span className="text-gold">AI</span>
+              <span className="text-2xl font-bold font-serif whitespace-nowrap">
+                <span className="text-white">Joana</span>
+                <span className="text-gold"> Del Fabro</span>
               </span>
             </div>
             <p className="max-w-sm mb-6 text-gray-400 leading-relaxed">

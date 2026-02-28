@@ -31,13 +31,13 @@ const services: Service[] = [
   {
     id: 'asesoria-financiera',
     icon: <BarChart3 className="w-8 h-8" />,
-    title: 'Asesoramiento Financiero',
+    title: 'Diseño de Infraestructura Tecnológica',
     subtitle: 'Dinero Digital & Smart Contracts',
     description: 'Construimos tu infraestructura financiera sobre la base del dinero digital y los contratos inteligentes autoejecutables.',
     features: [
       'Modelos de Tokenización de Activos',
       'Arquitectura de Smart Contracts',
-      'Planificación Financiera Digital',
+      'Planificación del Dinero Digital',
       'Despliegue de Dinero 3.0',
     ],
     gradient: 'from-gold/20 via-gold/5 to-transparent',

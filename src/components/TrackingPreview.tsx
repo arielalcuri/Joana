@@ -18,7 +18,7 @@ const providers = {
         apiDocs: 'https://www.correoargentino.com.ar/MiCorreo/public/img/pag/apiPaqAr-v2.pdf'
     },
     LEXAI_GLOBAL: {
-        name: 'LexAI Global Node',
+        name: 'Joana Del Fabro Global Node',
         logo: 'LX',
     }
 };

@@ -18,17 +18,17 @@ const serviceData = {
             'Análisis por Hora: Asesoramiento detallado y personalizado bajo demanda.',
             'Auditoría de Cumplimiento: Verificación de normativas locales e internacionales.'
         ],
-        fullContent: 'En LexAI no hacemos asesoría genérica. Nuestro equipo jurídico está capacitado en derecho informático y blockchain, permitiendo una revisión que comprende tanto el código legal como el código fuente. Facilitamos mediaciones que evitan litigios costosos mediante el entendimiento técnico.'
+        fullContent: 'En Joana Del Fabro no hacemos asesoría genérica. Nuestro equipo jurídico está capacitado en derecho informático y blockchain, permitiendo una revisión que comprende tanto el código legal como el código fuente. Facilitamos mediaciones que evitan litigios costosos mediante el entendimiento técnico.'
     },
     'asesoria-financiera': {
-        title: 'Asesoramiento Financiero',
+        title: 'Diseño de Infraestructura Tecnológica',
         subtitle: 'Dinero Digital & Smart Contracts',
         icon: <BarChart3 className="w-12 h-12" />,
         description: 'Construimos tu infraestructura financiera sobre la base del dinero digital y los contratos inteligentes autoejecutables.',
         details: [
             'Modelos de Tokenización: Diseño de activos inmobiliarios, financieros y arte.',
             'Smart Contracts Framework: Definición de reglas autoejecutables seguras.',
-            'Planificación Financiera Digital: Estructuración de flujos de pago y liquidez.',
+            'Planificación del Dinero Digital: Estructuración de flujos de pago y liquidez.',
             'Dinero 3.0: Implementación de modelos DeFi y Crowdfunding.'
         ],
         fullContent: 'El dinero digital es la base de la nueva economía. No solo asesoramos en finanzas; construimos infraestructuras donde cada transacción es segura, automática y transparente mediante contratos inteligentes.'
@@ -44,7 +44,7 @@ const serviceData = {
             'Infraestructura de Datos: Construcción de repositorios distribuidos y seguros.',
             'Análisis Predictivo: IA aplicada a la optimización de procesos de producción.'
         ],
-        fullContent: 'La innovación no es una opción, es una necesidad. LexAI diseña infraestructuras que garantizan que cada paso de tu proceso sea auditable, transparente y automático, eliminando el error humano y maximizando la trazabilidad.'
+        fullContent: 'La innovación no es una opción, es una necesidad. Joana Del Fabro diseña infraestructuras que garantizan que cada paso de tu proceso sea auditable, transparente y automático, eliminando el error humano y maximizando la trazabilidad.'
     },
     'gestor-bloques': {
         title: 'Gestor de Producción en Bloques',

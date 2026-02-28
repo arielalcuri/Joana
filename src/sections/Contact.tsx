@@ -85,8 +85,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">Email</h3>
-                    <p className="mt-1 text-gray-400">contacto@lexai.com</p>
-                    <p className="text-gray-400">urgente@lexai.com</p>
+                    <p className="mt-1 text-gray-400">contacto@joanadelfabro.com</p>
+                    <p className="text-gray-400">urgente@joanadelfabro.com</p>
                   </div>
                 </div>
               </div>
@@ -228,7 +228,7 @@ export function Contact() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Cuentas Globales</p>
-                <p className="text-white font-serif group-hover:text-gold transition-colors">PayPal LexAI</p>
+                <p className="text-white font-serif group-hover:text-gold transition-colors">PayPal Joana Del Fabro</p>
               </div>
             </div>
 
@@ -254,7 +254,7 @@ export function Contact() {
           </div>
 
           <p className="mt-12 text-[10px] text-gray-600 uppercase tracking-[0.3em] font-medium text-center">
-            LexAI Global Institutional Node • 2026
+            Joana Del Fabro Global Institutional Node • 2026
           </p>
         </div>
       </div>

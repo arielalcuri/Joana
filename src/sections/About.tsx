@@ -72,7 +72,7 @@ export function About() {
 
             <div className="mt-8 space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>
-                En <span className="text-gold font-semibold">LexAI</span> fusionamos décadas de
+                En <span className="text-gold font-semibold">Joana Del Fabro</span> fusionamos décadas de
                 experiencia legal con las tecnologías más avanzadas de inteligencia artificial
                 y blockchain. Somos pioneros en la transformación digital del sector legal.
               </p>
@@ -95,7 +95,7 @@ export function About() {
                 Nosotros la construimos."
               </p>
               <footer className="mt-4 text-gold">
-                — Fundadores de LexAI
+                — Joana Del Fabro
               </footer>
             </blockquote>
           </div>

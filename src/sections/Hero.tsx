@@ -40,8 +40,8 @@ export function Hero() {
             }`}
         >
           <span className="block text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl font-serif">
-            Lex
-            <span className="text-gradient-gold">AI</span>
+            Joana
+            <span className="text-gradient-gold"> Del Fabro</span>
           </span>
           <span className="block mt-4 text-xl tracking-widest uppercase text-gold/80 sm:text-2xl md:text-3xl">
             Abogados del Futuro

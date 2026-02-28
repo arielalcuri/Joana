@@ -73,9 +73,9 @@ export function Navigation() {
               }`}>
               <Scale className="w-6 h-6 text-gold" />
             </div>
-            <span className="text-2xl font-bold font-serif">
-              <span className="text-white">Lex</span>
-              <span className="text-gold">AI</span>
+            <span className="text-2xl font-bold font-serif whitespace-nowrap">
+              <span className="text-white">Joana</span>
+              <span className="text-gold"> Del Fabro</span>
             </span>
           </Link>
 
@@ -134,9 +134,9 @@ export function Navigation() {
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
                 <div className="flex items-center justify-between py-4 border-b border-gold/20">
-                  <span className="text-xl font-bold font-serif">
-                    <span className="text-white">Lex</span>
-                    <span className="text-gold">AI</span>
+                  <span className="text-xl font-bold font-serif whitespace-nowrap">
+                    <span className="text-white">Joana</span>
+                    <span className="text-gold"> Del Fabro</span>
                   </span>
                 </div>
 
