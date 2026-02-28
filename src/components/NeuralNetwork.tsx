@@ -53,7 +53,7 @@ export function NeuralNetwork({
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       ctx.scale(dpr, dpr);
-      
+
       if (nodesRef.current.length === 0) {
         nodesRef.current = initNodes(rect.width, rect.height);
       }
@@ -126,8 +126,8 @@ export function NeuralNetwork({
           node.x, node.y, 0,
           node.x, node.y, radius * 3
         );
-        gradient.addColorStop(0, `hsla(195, 100%, 65%, ${0.8 * pulse})`);
-        gradient.addColorStop(0.5, `hsla(195, 100%, 65%, ${0.3 * pulse})`);
+        gradient.addColorStop(0, `hsla(195, 100%, 65%, ${1.0 * pulse})`);
+        gradient.addColorStop(0.5, `hsla(195, 100%, 65%, ${0.5 * pulse})`);
         gradient.addColorStop(1, 'hsla(195, 100%, 65%, 0)');
 
         ctx.beginPath();
@@ -143,7 +143,7 @@ export function NeuralNetwork({
       });
 
       // Draw connections (optimized - only check every 3rd node)
-      ctx.strokeStyle = 'hsla(195, 100%, 65%, 0.2)';
+      ctx.strokeStyle = 'hsla(195, 100%, 65%, 0.4)';
       ctx.lineWidth = 1;
 
       for (let i = 0; i < nodes.length; i += 3) {
@@ -153,7 +153,7 @@ export function NeuralNetwork({
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectionDistance) {
-            const opacity = (1 - dist / connectionDistance) * 0.3;
+            const opacity = (1 - dist / connectionDistance) * 0.5;
             ctx.strokeStyle = `hsla(195, 100%, 65%, ${opacity})`;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -179,7 +179,7 @@ export function NeuralNetwork({
     <canvas
       ref={canvasRef}
       className={`absolute inset-0 w-full h-full pointer-events-auto ${className}`}
-      style={{ opacity: 0.8 }}
+      style={{ opacity: 1.0 }}
     />
   );
 }
