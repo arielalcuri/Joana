@@ -12,7 +12,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 6% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 33 48% 65%;
+    --primary: 34 34% 62%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 98%;
@@ -22,14 +22,14 @@
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 33 48% 65%;
+    --border: 34 34% 62%;
     --input: 240 6% 15%;
-    --ring: 33 48% 65%;
+    --ring: 34 34% 62%;
     --radius: 0.625rem;
 
-    --gold: 33 48% 65%;
-    --gold-light: 33 55% 78%;
-    --gold-dark: 33 40% 45%;
+    --gold: 34 34% 62%;
+    --gold-light: 34 42% 83%;
+    --gold-dark: 33 31% 42%;
     --sky-blue: 195 100% 65%;
     --sky-blue-light: 195 100% 75%;
     --sky-blue-dark: 195 100% 45%;
