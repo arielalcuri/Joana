@@ -213,7 +213,8 @@ export function TrackingPreview() {
                         <Button
                             type="submit"
                             disabled={isSearching}
-                            className="bg-gold text-black hover:bg-gold-light px-10 h-14 text-lg font-medium"
+                            variant="metallic"
+                            className="px-10 h-14 text-lg font-medium"
                         >
                             {isSearching ? 'Sincronizando APIs...' : 'Consultar Estado'}
                         </Button>
@@ -312,8 +313,9 @@ export function TrackingPreview() {
                                                     }
                                                     setShowCertificate(true);
                                                 }}
-                                                variant="ghost"
-                                                className="w-full text-xs text-gold hover:text-white hover:bg-gold/10 flex items-center gap-2 mt-4"
+                                                variant="metallic"
+                                                size="sm"
+                                                className="w-full text-xs flex items-center gap-2 mt-4"
                                             >
                                                 <FileBadge className="w-4 h-4" /> Generar Certificado Digital
                                             </Button>

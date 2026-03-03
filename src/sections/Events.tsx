@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Award, Users, Globe, Play, ExternalLink, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
@@ -145,10 +146,14 @@ export function Events() {
                 </div>
 
                 <div className="mt-20 text-center">
-                    <button className="px-8 py-4 bg-transparent border border-gold/30 text-gold rounded-full hover:bg-gold hover:text-black transition-all duration-500 font-bold uppercase tracking-widest text-xs flex items-center gap-3 mx-auto group">
+                    <Button
+                        variant="metallic"
+                        size="lg"
+                        className="mx-auto group"
+                    >
                         Explorar Galería de Media Completa
-                        <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                    </button>
+                        <ExternalLink className="w-5 h-5 ml-2 transition-transform group-hover:rotate-45" />
+                    </Button>
                 </div>
             </div>
         </section>

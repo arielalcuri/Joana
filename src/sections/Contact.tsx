@@ -194,8 +194,9 @@ export function Contact() {
 
                 <Button
                   type="submit"
+                  variant="metallic"
                   size="lg"
-                  className="w-full group bg-gold text-black hover:bg-gold-light hover:shadow-gold transition-all duration-300"
+                  className="w-full group"
                 >
                   Enviar Mensaje
                   <Send className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />

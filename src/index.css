@@ -69,7 +69,7 @@
 
 @layer utilities {
   .text-gold {
-    color: var(--gold-primary);
+    color: var(--gold-primary) !important;
   }
 
   .text-gold-light {

@@ -63,16 +63,17 @@ export function Hero() {
         >
           {/* Updated CTA as requested */}
           <Button
+            variant="metallic"
             size="lg"
-            className="group px-8 py-6 text-lg font-medium transition-all duration-300 btn-gold-metallic"
+            className="group px-8 py-6 text-lg font-medium transition-all duration-300"
           >
             Conoce Nuestros Servicios
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
+            variant="metallic"
             size="lg"
-            variant="outline"
-            className="px-8 py-6 text-lg font-medium transition-all duration-300 border-gold/50 text-gold hover:bg-gold/10 hover:border-gold"
+            className="px-8 py-6 text-lg font-medium transition-all duration-300"
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Hablemos de tu Proyecto
@@ -108,9 +109,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 border rounded-full border-gold/10 animate-spin-slow" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 border rounded-full border-sky-blue/10 animate-spin-slow" style={{ animationDirection: 'reverse' }} />
     </section>
   );
 }

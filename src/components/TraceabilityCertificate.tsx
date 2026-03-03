@@ -233,7 +233,8 @@ export function TraceabilityCertificate({ data, onClose }: CertificateProps) {
                         <Button
                             onClick={handleDownload}
                             disabled={isDownloading}
-                            className="bg-gold text-black hover:bg-gold-light gap-2 text-xs font-bold px-8 shadow-lg shadow-gold/20"
+                            variant="metallic"
+                            className="gap-2 text-xs font-bold px-8"
                         >
                             {isDownloading ? (
                                 <>

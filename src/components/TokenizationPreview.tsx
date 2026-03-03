@@ -101,7 +101,7 @@ export function TokenizationPreview() {
                                     <span className="text-xs text-gray-500">Total a invertir</span>
                                     <span className="text-2xl font-bold text-gold">€{investment.toLocaleString()}</span>
                                 </div>
-                                <Button className="w-full mt-6 bg-gold text-black hover:bg-gold-light font-serif">
+                                <Button variant="metallic" className="w-full mt-6 font-serif">
                                     Invertir en Activo Fraccionado
                                 </Button>
                             </div>

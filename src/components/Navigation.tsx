@@ -113,7 +113,8 @@ export function Navigation() {
               )
             ))}
             <Button
-              className="transition-all duration-300 btn-gold-metallic"
+              variant="metallic"
+              className="transition-all duration-300"
             >
               Consulta Estratégica
             </Button>
@@ -170,7 +171,8 @@ export function Navigation() {
                 {/* Mobile CTA */}
                 <div className="mt-auto pb-8">
                   <Button
-                    className="w-full btn-gold-metallic"
+                    variant="metallic"
+                    className="w-full"
                   >
                     Consulta Estratégica
                   </Button>
