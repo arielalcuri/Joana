@@ -73,7 +73,7 @@ export function Navigation() {
               }`}>
               <Scale className="w-6 h-6 text-gold" />
             </div>
-            <span className="text-2xl font-bold font-serif whitespace-nowrap text-gold">
+            <span className="logo-text whitespace-nowrap">
               Joana Del Fabro
             </span>
           </Link>
@@ -113,7 +113,7 @@ export function Navigation() {
               )
             ))}
             <Button
-              className="bg-gold text-black hover:bg-gold-light hover:shadow-gold transition-all duration-300"
+              className="transition-all duration-300 btn-gold-metallic"
             >
               Consulta Estratégica
             </Button>
@@ -170,7 +170,7 @@ export function Navigation() {
                 {/* Mobile CTA */}
                 <div className="mt-auto pb-8">
                   <Button
-                    className="w-full bg-gold text-black hover:bg-gold-light"
+                    className="w-full btn-gold-metallic"
                   >
                     Consulta Estratégica
                   </Button>

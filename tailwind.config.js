@@ -11,9 +11,9 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+          DEFAULT: "var(--gold-primary)",
+          light: "var(--gold-light)",
+          dark: "var(--gold-dark)",
         },
         "sky-blue": {
           DEFAULT: "hsl(var(--sky-blue))",
@@ -72,7 +72,7 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        gold: "0 0 20px hsl(34 34% 62% / 0.5), 0 0 40px hsl(34 34% 62% / 0.3)",
+        gold: "0 0 20px rgba(191, 163, 126, 0.5), 0 0 40px rgba(191, 163, 126, 0.3)",
         "sky-blue": "0 0 20px hsl(195 100% 65% / 0.5), 0 0 40px hsl(195 100% 65% / 0.3)",
       },
       keyframes: {

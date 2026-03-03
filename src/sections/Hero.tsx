@@ -64,7 +64,7 @@ export function Hero() {
           {/* Updated CTA as requested */}
           <Button
             size="lg"
-            className="group px-8 py-6 text-lg font-medium transition-all duration-300 bg-gold text-black hover:bg-gold-light hover:shadow-gold"
+            className="group px-8 py-6 text-lg font-medium transition-all duration-300 btn-gold-metallic"
           >
             Conoce Nuestros Servicios
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
