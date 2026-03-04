@@ -116,14 +116,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <span className="text-sm text-gray-500">
-                Diseñado con
-              </span>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-gold" />
-                <div className="w-2 h-2 rounded-full bg-sky-blue" />
-              </div>
-              <span className="text-sm text-gray-500">
-                Argentina & Global Node
+                Diseñado por Ariel Alcuri
               </span>
             </div>
           </div>
