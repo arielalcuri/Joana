@@ -315,9 +315,9 @@ export function TrackingPreview() {
                                                 }}
                                                 variant="metallic"
                                                 size="sm"
-                                                className="w-full text-[9px] px-2 flex items-center gap-1 mt-4"
+                                                className="w-full text-[7px] px-0.5 flex items-center justify-center gap-0.5 mt-4"
                                             >
-                                                <FileBadge className="w-4 h-4" /> Generar Certificado Digital
+                                                <FileBadge className="w-2.5 h-2.5" /> Generar Certificado Digital
                                             </Button>
                                         </div>
                                     </div>
