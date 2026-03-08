@@ -122,9 +122,7 @@ export function Services() {
           <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
             Nuestros Servicios
           </span>
-          <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif">
-            Soluciones <span className="text-gradient-gold">LegalTech</span> de Vanguardia
-          </h2>
+
           <p className="mt-6 text-lg text-gray-400">
             Combinamos experiencia legal tradicional con tecnología de punta para ofrecer
             servicios que transforman la industria.

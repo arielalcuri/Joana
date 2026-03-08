@@ -76,7 +76,7 @@ export function Hero() {
             className="px-8 py-6 text-lg font-medium transition-all duration-300"
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Hablemos de tu Proyecto
+            Concretemos tu proyecto
           </Button>
         </div>
 

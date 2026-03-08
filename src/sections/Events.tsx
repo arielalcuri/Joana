@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Award, Users, Globe, Play, ExternalLink, Zap } from 'lucide-react';
+import { Award, Play, ExternalLink, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const events = [
@@ -60,8 +60,8 @@ export function Events() {
                         Presencia <span className="text-gradient-gold">Global</span> & Networking
                     </h2>
                     <p className="mt-6 text-lg text-gray-400">
-                        Conectamos con los polos tecnológicos más importantes del mundo para mostrar el respaldo
-                        y la solidez de Joana Del Fabro. Networking disruptivo y alianzas estratégicas.
+                        <strong className="block text-white mb-2">Disrupción de Gestion de Nodos</strong>
+                        El valor de su trayectoria reside en la capacidad de orquestar redes de colaboración que ignoran las fronteras tradicionales. Su enfoque de networking es disruptivo porque no se basa en la acumulación de contactos, sino en la activación de sinergias técnicas a nivel federal e internacional.
                     </p>
                 </div>
 
@@ -83,16 +83,7 @@ export function Events() {
                     </Card>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center">
-                            <Users className="w-8 h-8 text-gold mx-auto mb-2" />
-                            <p className="text-2xl font-bold text-white">500+</p>
-                            <p className="text-xs text-gray-500 uppercase tracking-widest">Participantes</p>
-                        </div>
-                        <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center">
-                            <Globe className="w-8 h-8 text-gold mx-auto mb-2" />
-                            <p className="text-2xl font-bold text-white">12+</p>
-                            <p className="text-xs text-gray-500 uppercase tracking-widest">Hubs Globales</p>
-                        </div>
+
                         <div className="p-6 rounded-2xl border border-white/5 bg-background/50 text-center col-span-2">
                             <Award className="w-8 h-8 text-gold mx-auto mb-2" />
                             <p className="text-2xl font-bold text-white tracking-tighter">Sponsors Estratégicos</p>

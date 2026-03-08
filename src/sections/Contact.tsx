@@ -3,8 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { MercadoPagoPayment } from '@/components/MercadoPagoPayment';
 
 export function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,11 +63,10 @@ export function Contact() {
             Contacto
           </span>
           <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif">
-            Inicia tu <span className="text-gradient-gold">Transformación</span>
+            Diseño de <span className="text-gradient-gold">Futuros Escalables con IA</span>
           </h2>
           <p className="mt-6 text-lg text-gray-400">
-            Agenda una consulta técnica-estratégica. Valoramos nuestro tiempo y el tuyo:
-            las consultas se abonan por adelantado y se descuentan del presupuesto final del proyecto.
+            Acceda a un diagnóstico técnico-estratégico de alto nivel para su proyecto. Para garantizar el rigor analítico y la dedicación exclusiva que la complejidad de la IA demanda, los honorarios de la sesión inicial se abonan por adelantado. En caso de concretar el proyecto, dicho monto se acreditará íntegramente como pago a cuenta del presupuesto final.
           </p>
         </div>
 
@@ -90,17 +90,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-gold/20 bg-background/50 hover:border-gold/40 transition-colors">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-gold/10 text-gold">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">Teléfono</h3>
-                    <p className="mt-1 text-gray-400">Próximamente</p>
-                  </div>
-                </div>
-              </div>
+
 
               <div className="p-6 rounded-xl border border-gold/20 bg-background/50 hover:border-gold/40 transition-colors">
                 <div className="flex items-start gap-4">
@@ -121,9 +111,11 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
+                  title="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
+
               </div>
             </div>
           </div>
@@ -198,7 +190,7 @@ export function Contact() {
                   size="lg"
                   className="w-full group"
                 >
-                  Enviar Mensaje
+                  Solicitar Consulta Técnica
                   <Send className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
@@ -270,6 +262,15 @@ export function Contact() {
               En breve recibirás un link de pago (PayPal / Mercado Pago) para confirmar la sesión oficial.
               Recuerda que este monto se acredita a tu cuenta para el desarrollo final.
             </p>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <h4 className="text-sm font-semibold text-white mb-2 uppercase tracking-wider">Abonar Sesión Inicial (ARS)</h4>
+            <MercadoPagoPayment
+              description="Consultoría Técnica-Estratégica IA - Joana Del Fabro"
+              price={50000}
+              quantity={1}
+            />
           </div>
         </DialogContent>
       </Dialog>

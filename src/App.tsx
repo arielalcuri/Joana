@@ -3,6 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { Home } from '@/pages/Home';
 import { ServiceDetail } from '@/pages/ServiceDetail';
 import { Footer } from '@/sections/Footer';
+import { FloatingContact } from '@/components/FloatingContact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingContact />
       </div>
     </Router>
   );

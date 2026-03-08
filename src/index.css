@@ -237,10 +237,35 @@
   animation: draw-line 3s ease-out forwards;
 }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.3), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
+@keyframes ping-slow {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite;
+}
+
+.animate-bounce-slow-delay {
+  animation: bounce-slow 4s infinite;
+  animation-delay: 2s;
 }
 
 /* Scrollbar styling */

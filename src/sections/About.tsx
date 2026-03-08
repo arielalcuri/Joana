@@ -1,12 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Brain, Briefcase, TrendingUp, Users } from 'lucide-react';
 
-const stats = [
-  { icon: <Brain className="w-6 h-6" />, value: 'AI', label: 'Powered Legal' },
-  { icon: <Briefcase className="w-6 h-6" />, value: '15+', label: 'Años Experiencia' },
-  { icon: <TrendingUp className="w-6 h-6" />, value: '98%', label: 'Clientes Satisfechos' },
-  { icon: <Users className="w-6 h-6" />, value: '200+', label: 'Empresas Asesoradas' },
-];
 
 export function About() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -72,19 +65,13 @@ export function About() {
 
             <div className="mt-8 space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>
-                En <span className="text-gold font-semibold">Joana Del Fabro</span> fusionamos décadas de
-                experiencia legal con las tecnologías más avanzadas de inteligencia artificial
-                y blockchain. Somos pioneros en la transformación digital del sector legal.
+                Joana Del Fabro es abogada y académica enfocada en la disrupción de sistemas complejos. Su liderazgo no busca el consenso, si no se encuentra con la excelencia técnica. En entornos de alta presión y proyectos de gran impacto, aporta una visión estratégica que utiliza la Inteligencia Artificial como una herramienta de precisión, no de especulación. Su valor profesional es la capacidad de orquestar talento y tecnología bajo un marco de rigor científico, convirtiendo la innovación disruptiva en una estructura operativa de alto rendimiento.
               </p>
               <p>
-                Nuestro equipo multidisciplinario combina abogados senior, desarrolladores
-                blockchain, científicos de datos y expertos financieros para ofrecer
-                soluciones integrales que anticipan las necesidades del mercado.
+                Su equipo multidisciplinario combina abogados senior, desarrolladores blockchain, científicos de datos y expertos financieros para ofrecer soluciones integrales que anticipan las necesidades del mercado.
               </p>
               <p>
-                Creemos en un mundo donde el acceso a servicios legales de elite sea
-                democratizado mediante la tecnología, reduciendo costos y tiempos sin
-                comprometer la excelencia.
+                Cree en un mundo donde el acceso a servicios legales de elite sea democratizado mediante la tecnología, reduciendo costos y tiempos sin comprometer la excelencia.
               </p>
             </div>
 
@@ -106,26 +93,7 @@ export function About() {
               }`}
           >
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="group relative p-8 rounded-2xl border border-gold/20 bg-background/50 hover:border-gold/50 transition-all duration-500"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  <div className="relative z-10">
-                    <div className="p-3 mb-4 rounded-lg w-fit bg-gold/10 text-gold group-hover:shadow-gold/30 transition-shadow duration-500">
-                      {stat.icon}
-                    </div>
-                    <div className="text-3xl font-bold text-white font-serif">
-                      {stat.value}
-                    </div>
-                    <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
-                  </div>
-                </div>
-              ))}
             </div>
 
             {/* Additional Info Card */}

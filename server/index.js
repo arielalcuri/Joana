@@ -2,12 +2,18 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const { MercadoPagoConfig, Preference } = require('mercadopago');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Mercado Pago Configuration
+const mpClient = new MercadoPagoConfig({
+    accessToken: process.env.MP_ACCESS_TOKEN || 'TEST-2485546594228943-030817-f5e1811554657173824354c4656545b7-123456789'
+});
 
 // --- MOCK DATA FOR DEMO MODE ---
 const DEMO_CA_DATA = {
@@ -93,6 +99,39 @@ app.post('/api/bfa/stamp', async (req, res) => {
     } catch (error) {
         console.error('BFA SERVER ERROR:', error.message);
         res.status(500).json({ error: 'Error interno en el servidor BFA Bridge' });
+    }
+});
+
+// --- RUTA: MERCADO PAGO (Crear Preferencia) ---
+app.post('/api/mp/create-preference', async (req, res) => {
+    try {
+        const { description, price, quantity } = req.body;
+
+        const preference = new Preference(mpClient);
+
+        const result = await preference.create({
+            body: {
+                items: [
+                    {
+                        title: description,
+                        unit_price: Number(price),
+                        quantity: Number(quantity),
+                        currency_id: 'ARS'
+                    }
+                ],
+                back_urls: {
+                    success: `${req.headers.origin}/#/success`,
+                    failure: `${req.headers.origin}/#/failure`,
+                    pending: `${req.headers.origin}/#/pending`
+                },
+                auto_return: 'approved',
+            }
+        });
+
+        res.json({ id: result.id });
+    } catch (error) {
+        console.error('MP PREFERENCE ERROR:', error);
+        res.status(500).json({ error: 'Error al crear la preferencia de pago' });
     }
 });
 
