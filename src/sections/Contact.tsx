@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Mail, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { MercadoPagoPayment } from '@/components/MercadoPagoPayment';
+import { supabase } from '@/supabase';
 
 export function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,10 +36,30 @@ export function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowDialog(true);
-    setFormData({ name: '', email: '', company: '', message: '' });
+
+    try {
+      // Guardar en Supabase
+      const { error } = await supabase
+        .from('messages')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            message: formData.message,
+            status: 'new'
+          }
+        ]);
+
+      if (error) throw error;
+
+      setShowDialog(true);
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      console.error("Error saving message to Supabase:", error);
+    }
   };
 
   return (
