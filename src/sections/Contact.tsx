@@ -7,6 +7,7 @@ import { Mail, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { MercadoPagoPayment } from '@/components/MercadoPagoPayment';
 import { supabase } from '@/supabase';
+import { getSetting } from '@/services/settings';
 import { toast } from 'sonner';
 
 export function Contact() {
@@ -19,6 +20,19 @@ export function Contact() {
     company: '',
     message: '',
   });
+
+  const [mpPrice, setMpPrice] = useState(50000);
+  const [mpDescription, setMpDescription] = useState('Consultoría Técnica-Estratégica IA - Joana Del Fabro');
+
+  useEffect(() => {
+    const fetchSettings = async () => {
+      const price = await getSetting('mp_price', 50000);
+      const description = await getSetting('mp_description', 'Consultoría Técnica-Estratégica IA - Joana Del Fabro');
+      setMpPrice(price);
+      setMpDescription(description);
+    };
+    fetchSettings();
+  }, [showDialog]); // Refetch when dialog opens to be sure it's fresh
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -291,8 +305,8 @@ export function Contact() {
           <div className="mt-6 pt-6 border-t border-white/10">
             <h4 className="text-sm font-semibold text-white mb-2 uppercase tracking-wider">Abonar Sesión Inicial (ARS)</h4>
             <MercadoPagoPayment
-              description="Consultoría Técnica-Estratégica IA - Joana Del Fabro"
-              price={50000}
+              description={mpDescription}
+              price={mpPrice}
               quantity={1}
             />
           </div>

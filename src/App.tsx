@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Home } from '@/pages/Home';
 import { ServiceDetail } from '@/pages/ServiceDetail';
+import { Admin } from '@/pages/Admin';
 import { Footer } from '@/sections/Footer';
 import { FloatingContact } from '@/components/FloatingContact';
 
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servicio/:id" element={<ServiceDetail />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>
         <Footer />
