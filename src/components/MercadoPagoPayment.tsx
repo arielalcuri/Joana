@@ -1,5 +1,6 @@
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 
 // Use environment variable or placeholder
 const PUBLIC_KEY = import.meta.env.VITE_MP_PUBLIC_KEY || 'TEST-123abc456def789ghi';
@@ -18,7 +19,10 @@ export function MercadoPagoPayment({ description, price, quantity }: PaymentButt
     const handlePayment = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:3000/api/mp/create-preference', {
+            // Priorizamos la variable de entorno, con el Worker real como respaldo para producción
+            const WORKER_URL = import.meta.env.VITE_MP_WORKER_URL || 'https://tiny-paper-5f50.arielalcuri.workers.dev';
+
+            const response = await fetch(`${WORKER_URL}/api/mp/create-preference`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -33,9 +37,12 @@ export function MercadoPagoPayment({ description, price, quantity }: PaymentButt
             const data = await response.json();
             if (data.id) {
                 setPreferenceId(data.id);
+            } else {
+                throw new Error('No se pudo generar el ID de preferencia');
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error creating preference:', error);
+            toast.error('No se pudo conectar con el servidor de pagos local.');
         } finally {
             setIsLoading(false);
         }

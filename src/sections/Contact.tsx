@@ -7,6 +7,7 @@ import { Mail, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { MercadoPagoPayment } from '@/components/MercadoPagoPayment';
 import { supabase } from '@/supabase';
+import { toast } from 'sonner';
 
 export function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -55,10 +56,12 @@ export function Contact() {
 
       if (error) throw error;
 
+      toast.success('Mensaje enviado y guardado correctamente');
       setShowDialog(true);
       setFormData({ name: '', email: '', company: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error saving message to Supabase:", error);
+      toast.error('Error al guardar mensaje: ' + (error.message || 'Error desconocido'));
     }
   };
 
