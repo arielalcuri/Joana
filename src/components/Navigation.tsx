@@ -72,7 +72,7 @@ export function Navigation() {
             <img
               src="/logo.png"
               alt="Joana Del Fabro Logo"
-              className="w-10 h-10 object-contain transition-all duration-300 hover:scale-105"
+              className="w-10 h-10 object-contain transition-all duration-300 hover:scale-105 mix-blend-screen"
             />
             <span className="logo-text whitespace-nowrap">
               Joana Del Fabro

@@ -1,4 +1,4 @@
-import { Scale, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const footerLinks = {
@@ -32,9 +32,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-gold/10">
-                <Scale className="w-6 h-6 text-gold" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Joana Del Fabro Logo"
+                className="w-8 h-8 object-contain mix-blend-screen"
+              />
               <span className="text-2xl font-bold font-serif whitespace-nowrap text-gold">
                 Joana Del Fabro
               </span>
