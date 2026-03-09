@@ -35,7 +35,7 @@ export function Footer() {
               <img
                 src="/logo.png"
                 alt="Joana Del Fabro Logo"
-                className="w-8 h-8 object-contain"
+                className="w-8 h-8 object-contain mix-blend-screen"
               />
               <span className="text-2xl font-bold font-serif whitespace-nowrap text-gold">
                 Joana Del Fabro
