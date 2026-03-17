@@ -55,7 +55,7 @@ export function Contact() {
     e.preventDefault();
 
     try {
-      // Guardar en Supabase
+      // 1. Guardar en Supabase (opcional pero lo dejamos para respaldo)
       const { error } = await supabase
         .from('messages')
         .insert([
@@ -70,12 +70,33 @@ export function Contact() {
 
       if (error) throw error;
 
-      toast.success('Mensaje enviado y guardado correctamente');
+      // 2. Enviar correo a Gmail vía Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "fa4d1cae-9d01-402a-85b5-0dd6faecc521",
+          subject: "Nuevo mensaje desde sitio web web (Joana Del Fabro)",
+          from_name: formData.name,
+          ...formData, // email, company, message
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Error al enviar el correo a Gmail");
+      }
+
+      toast.success('Mensaje enviado correctamente');
       setShowDialog(true);
       setFormData({ name: '', email: '', company: '', message: '' });
     } catch (error: any) {
-      console.error("Error saving message to Supabase:", error);
-      toast.error('Error al guardar mensaje: ' + (error.message || 'Error desconocido'));
+      console.error("Error al procesar el mensaje:", error);
+      toast.error('Error al enviar mensaje: ' + (error.message || 'Inténtalo nuevamente'));
     }
   };
 
