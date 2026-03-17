@@ -80,33 +80,6 @@ export function Hero() {
           </Button>
         </div>
 
-        {/* Stats */}
-        <div
-          className={`grid grid-cols-3 gap-8 mt-20 sm:gap-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-        >
-          <div className="text-center">
-            <div className="flex justify-center mb-2">
-              <Scale className="w-6 h-6 text-gold" />
-            </div>
-            <div className="text-2xl font-bold text-white sm:text-3xl font-serif">500+</div>
-            <div className="text-sm text-gray-500">Casos Exitosos</div>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-2">
-              <Cpu className="w-6 h-6 text-sky-blue" />
-            </div>
-            <div className="text-2xl font-bold text-white sm:text-3xl font-serif">AI</div>
-            <div className="text-sm text-gray-500">Powered</div>
-          </div>
-          <div className="text-center">
-            <div className="flex justify-center mb-2">
-              <Shield className="w-6 h-6 text-gold" />
-            </div>
-            <div className="text-2xl font-bold text-white sm:text-3xl font-serif">100%</div>
-            <div className="text-sm text-gray-500">Seguro</div>
-          </div>
-        </div>
       </div>
 
     </section>

@@ -19,9 +19,8 @@ const services: Service[] = [
     icon: <Scale className="w-8 h-8" />,
     title: 'Asesoramiento Técnico-Legal',
     subtitle: 'Revisión & Análisis Jurídico',
-    description: 'Consultoría legal especializada en tecnología y mediaciones. Análisis profundo revisado por hora para máxima precisión.',
+    description: 'Consultoría legal especializada en tecnología. Análisis profundo revisado por hora para máxima precisión.',
     features: [
-      'Mediaciones y Resolución de Conflictos',
       'Análisis y Revisión Legal Estratégica',
       'Dictámenes Jurídicos de Complejidad',
       'Auditoría en Cumplimiento Normativo',

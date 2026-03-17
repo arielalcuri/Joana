@@ -11,9 +11,8 @@ const serviceData = {
         title: 'Asesoramiento Técnico-Legal',
         subtitle: 'Revisión & Análisis Jurídico',
         icon: <Scale className="w-12 h-12" />,
-        description: 'Consultoría jurídica especializada en la intersección de la ley y la tecnología. Ofrecemos análisis profundo, revisión de contratos y mediaciones técnicas.',
+        description: 'Consultoría jurídica especializada en la intersección de la ley y la tecnología. Ofrecemos análisis profundo y revisión de contratos.',
         details: [
-            'Mediaciones: Resolución de conflictos tecnológicos y contractuales.',
             'Análisis Jurídico: Revisión exhaustiva de riesgos legales en plataformas digitales.',
             'Análisis por Hora: Asesoramiento detallado y personalizado bajo demanda.',
             'Auditoría de Cumplimiento: Verificación de normativas locales e internacionales.'

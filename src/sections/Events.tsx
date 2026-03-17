@@ -8,7 +8,7 @@ const events = [
         title: 'Buenos Aires Tech Week',
         date: 'Octubre 2025',
         location: 'Sede Central ITBA',
-        description: 'Presentación de Joana Del Fabro ante el ecosistema startup regional. Pitching de tokenización de activos.',
+        description: '',
         category: 'Conferencia',
         image: 'https://images.unsplash.com/photo-1540575861501-7ad0582282fb?auto=format&fit=crop&q=80',
     },
@@ -56,12 +56,9 @@ export function Events() {
                     <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
                         Capital Social & Trayectoria
                     </span>
-                    <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif">
-                        Presencia <span className="text-gradient-gold">Global</span> & Networking
-                    </h2>
                     <p className="mt-6 text-lg text-gray-400">
                         <strong className="block text-white mb-2">Disrupción de Gestion de Nodos</strong>
-                        El valor de su trayectoria reside en la capacidad de orquestar redes de colaboración que ignoran las fronteras tradicionales. Su enfoque de networking es disruptivo porque no se basa en la acumulación de contactos, sino en la activación de sinergias técnicas a nivel federal e internacional.
+                        El valor de su trayectoria reside en la capacidad de orquestar redes de colaboración que traspasan las fronteras tradicionales. Su enfoque de networking es disruptivo porque no se basa en la acumulación de contactos, sino en la activación de sinergias técnicas a nivel federal e internacional.
                     </p>
                 </div>
 
