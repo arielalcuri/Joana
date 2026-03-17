@@ -1,6 +1,6 @@
 import { NeuralNetwork } from '@/components/NeuralNetwork';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Scale, Cpu, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function Hero() {
