@@ -161,10 +161,15 @@ export function ServiceDetail() {
                     </div>
                 </div>
 
-                {id === 'gestor-bloques' && (
-                    <div className="mb-20">
-                        <TrackingPreview />
-                    </div>
+                {id === 'arquitectura-juridica' && (
+                    <>
+                        <div className="mb-20">
+                            <TrackingPreview />
+                        </div>
+                        <div className="mb-20">
+                            <TokenizationPreview />
+                        </div>
+                    </>
                 )}
 
                 {id === 'blockchain' && (
