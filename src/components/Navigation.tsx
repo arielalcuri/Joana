@@ -12,13 +12,15 @@ import {
 
 const navLinks = [
   {
-    label: 'Servicios',
+    label: 'Soluciones estratégicas',
     href: '/#servicios',
     sublinks: [
-      { label: 'Asesoramiento Legal', href: '/servicio/asesoria' },
-      { label: 'Asesoramiento Financiero', href: '/servicio/asesoria-financiera' },
-      { label: 'Innovación & Automatización', href: '/servicio/automatizacion' },
-      { label: 'Gestor de Bloques', href: '/servicio/gestor-bloques' },
+      { label: 'EVALUACIÓN LEGAL DE PROYECTOS TECNOLÓGICOS', href: '/servicio/evaluacion-legal' },
+      { label: 'AUDITORÍA DE INTELIGENCIA ARTIFICIAL', href: '/servicio/auditoria-ia' },
+      { label: 'BLOCKCHAIN & SMART CONTRACTS', href: '/servicio/blockchain' },
+      { label: 'MITIGACIÓN DE RIESGOS TECNOLÓGICOS', href: '/servicio/mitigacion' },
+      { label: 'ESTRATEGIA LEGAL TECH', href: '/servicio/estrategia-legaltech' },
+      { label: 'ARQUITECTURA JURÍDICA DE INNOVACIÓN', href: '/servicio/gestor-bloques' },
     ]
   },
   { label: 'Eventos', href: '/#eventos' },

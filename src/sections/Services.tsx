@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
-import { Workflow, ArrowUpRight, Scale, BarChart3, Database } from 'lucide-react';
+import { Workflow, ArrowUpRight, Scale, BarChart3, Database, Shield, Zap } from 'lucide-react';
 
 interface Service {
   id: string;
@@ -15,65 +15,94 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: 'asesoria',
+    id: 'evaluacion-legal',
     icon: <Scale className="w-8 h-8" />,
-    title: 'Asesoramiento Técnico-Legal',
-    subtitle: 'Revisión & Análisis Jurídico',
-    description: 'Consultoría legal especializada en tecnología. Análisis profundo revisado por hora para máxima precisión.',
+    title: 'Evaluación Legal de Proyectos Tecnológicos',
+    subtitle: 'Detecto riesgos antes de que sean problemas',
+    description: 'Analizo proyectos basados en IA, plataformas digitales y Blockchain para identificar riesgos legales y brechas regulatorias. Trabajo sobre estructuras reales, no teóricas.',
     features: [
-      'Análisis y Revisión Legal Estratégica',
-      'Dictámenes Jurídicos de Complejidad',
-      'Auditoría en Cumplimiento Normativo',
+      'Análisis de riesgos legales y regulatorios',
+      'Detección de vulnerabilidades en el modelo',
+      'Evaluación de cumplimiento',
+      'Recomendaciones accionables',
     ],
     gradient: 'from-sky-blue/20 via-gold/5 to-transparent',
   },
   {
-    id: 'asesoria-financiera',
-    icon: <BarChart3 className="w-8 h-8" />,
-    title: 'Diseño de Infraestructura Tecnológica',
-    subtitle: 'Dinero Digital & Smart Contracts',
-    description: 'Construimos tu infraestructura financiera sobre la base del dinero digital y los contratos inteligentes autoejecutables.',
+    id: 'auditoria-ia',
+    icon: <Database className="w-8 h-8" />,
+    title: 'Auditoría de Inteligencia Artificial',
+    subtitle: 'Visión jurídica, impacto y riesgos',
+    description: 'Audito sistemas de IA desde una perspectiva jurídica y estratégica. No se trata solo de revisar algoritmos, sino de entender cómo afectan derechos y responsabilidad legal.',
     features: [
-      'Modelos de Tokenización de Activos',
-      'Arquitectura de Smart Contracts',
-      'Planificación del Dinero Digital',
-      'Despliegue de Dinero 3.0',
+      'Análisis de riesgos y sesgos',
+      'Evaluación de cumplimiento normativo',
+      'Revisión de procesos automatizados',
+      'Trazabilidad y gobernanza',
     ],
     gradient: 'from-gold/20 via-gold/5 to-transparent',
   },
   {
-    id: 'automatizacion',
+    id: 'blockchain',
     icon: <Workflow className="w-8 h-8" />,
-    title: 'Innovación & Automatización',
-    subtitle: 'Optimización Disruptiva',
-    description: 'Revolucionamos tus procesos mediante la automatización inteligente y el control absoluto de trazabilidad.',
+    title: 'Blockchain & Smart Contracts',
+    subtitle: 'Transformo lógica en estructura legal',
+    description: 'Diseño y valido la estructura jurídica detrás de proyectos basados en Blockchain y Smart Contracts para que sean legalmente ejecutables y sostenibles.',
     features: [
-      'Automatización de Procesos Críticos',
-      'Control de Trazabilidad Inmutable',
-      'Infraestructura de Datos Distribuida',
-      'Sistemas de Auditoría In-Process',
+      'Estructuración jurídica de activos digitales',
+      'Diseño legal de tokenización',
+      'Validación de smart contracts',
+      'Cumplimiento regulatorio',
     ],
     gradient: 'from-sky-blue/20 via-sky-blue/5 to-transparent',
   },
   {
-    id: 'gestor-bloques',
-    icon: <Database className="w-8 h-8" />,
-    title: 'Gestor de Producción en Bloques',
-    subtitle: 'Agente Ejecutiva Blockchain',
-    description: 'Un gestor avanzado para la producción y validación de bloques, asegurando la eficiencia en redes distribuidas.',
+    id: 'mitigacion',
+    icon: <Shield className="w-8 h-8" />,
+    title: 'Mitigación de Riesgos Tecnológicos',
+    subtitle: 'Prevención y control legal',
+    description: 'Identifico y reduzco riesgos legales en entornos digitales antes de que impacten en tu operación, reputación o modelo de negocio.',
     features: [
-      'Validación de Nodos Institucionales',
-      'Gestión de Producción Logística',
-      'Monitoreo de Redes en Tiempo Real',
-      'Optimización de Gas y Recursos',
+      'Análisis de exposición legal',
+      'Identificación de contingencias',
+      'Diseño de estrategias de mitigación',
+      'Recomendaciones preventivas',
     ],
     gradient: 'from-gold/20 via-sky-blue/10 to-transparent',
+  },
+  {
+    id: 'estrategia-legaltech',
+    icon: <Zap className="w-8 h-8" />,
+    title: 'Estrategia Legal Tech',
+    subtitle: 'Acompañamiento, criterio y visión',
+    description: 'Acompaño a empresas y organizaciones que trabajan con tecnología en su toma de decisiones legales de forma continua.',
+    features: [
+      'Asesoramiento estratégico mensual',
+      'Revisión de proyectos',
+      'Soporte en decisiones críticas',
+      'Actualización regulatoria',
+    ],
+    gradient: 'from-sky-blue/20 via-gold/5 to-transparent',
+  },
+  {
+    id: 'gestor-bloques',
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: 'Arquitectura Jurídica de Innovación',
+    subtitle: 'Estructuración de impacto escalable',
+    description: 'Diseño la estructura legal completa de proyectos tecnológicos complejos, integrando regulación, riesgos, ejecución y escalabilidad.',
+    features: [
+      'Diseño integral legal del proyecto',
+      'Estructuración de gobernanza',
+      'Validación de ejecución',
+      'Estrategia de escalabilidad',
+    ],
+    gradient: 'from-gold/20 via-gold/5 to-transparent',
   },
 ];
 
 export function Services() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false, false, false]);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false, false, false, false]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -119,7 +148,7 @@ export function Services() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
-            Nuestros Servicios
+            Soluciones estratégicas
           </span>
 
           <p className="mt-6 text-lg text-gray-400">
