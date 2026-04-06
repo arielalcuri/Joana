@@ -173,9 +173,14 @@ export function ServiceDetail() {
                 )}
 
                 {id === 'blockchain' && (
-                    <div className="mb-20">
-                        <TokenizationPreview />
-                    </div>
+                    <>
+                        <div className="mb-20">
+                            <TrackingPreview />
+                        </div>
+                        <div className="mb-20">
+                            <TokenizationPreview />
+                        </div>
+                    </>
                 )}
 
                 <div className="text-center p-12 rounded-3xl bg-gradient-to-b from-background to-gold/5 border border-gold/10">
