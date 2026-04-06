@@ -24,7 +24,7 @@ const navLinks = [
     ]
   },
   { label: 'Eventos', href: '/#eventos' },
-  { label: 'Nosotros', href: '/#nosotros' },
+  { label: '¿Quién soy?', href: '/#nosotros' },
   { label: 'Contacto', href: '/#contacto' },
 ];
 
