@@ -121,6 +121,10 @@ export function Contact() {
           <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
             Contacto
           </span>
+          <p className="mb-6 font-medium text-white max-w-2xl mx-auto text-lg leading-relaxed">
+            Si estás desarrollando un proyecto con IA o Blockchain, el riesgo no es tecnológico, es jurídico.<br/>
+            Evalua a tu estructura legal hoy.
+          </p>
           <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif">
             Diseño de <span className="text-gradient-gold">Futuros Escalables con IA</span>
           </h2>

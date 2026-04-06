@@ -55,7 +55,7 @@ export function About() {
               }`}
           >
             <span className="inline-block px-4 py-2 mb-6 text-sm tracking-wider uppercase border rounded-full text-gold border-gold/30 bg-gold/5">
-              Sobre Nosotros
+              ¿Quién Soy?
             </span>
 
             <h2 className="text-4xl font-bold text-white sm:text-5xl font-serif leading-tight">
@@ -65,26 +65,39 @@ export function About() {
 
             <div className="mt-8 space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>
-                Joana Del Fabro es abogada y académica enfocada en la disrupción de sistemas complejos. Su liderazgo no busca el consenso, si no se encuentra con la excelencia técnica. En entornos de alta presión y proyectos de gran impacto, aporta una visión estratégica que utiliza la Inteligencia Artificial como una herramienta de precisión, no de especulación. Su valor profesional es la capacidad de orquestar talento y tecnología bajo un marco de rigor científico, convirtiendo la innovación disruptiva en una estructura operativa de alto rendimiento.
+                Soy abogada especializada en tecnologías emergentes, enfocada en el diseño, regulación y auditoría de sistemas basados en Inteligencia Artificial y Blockchain.
               </p>
               <p>
-                Su equipo multidisciplinario combina abogados senior, desarrolladores blockchain, científicos de datos y expertos financieros para ofrecer soluciones integrales que anticipan las necesidades del mercado.
+                Trabajo en la intersección entre derecho, innovación y negocios, acompañando a organizaciones que entienden que el futuro no se improvisa: se estructura jurídicamente.
               </p>
               <p>
-                Cree en un mundo donde el acceso a servicios legales de elite sea democratizado mediante la tecnología, reduciendo costos y tiempos sin comprometer la excelencia.
+                Mi enfoque combina:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Pensamiento crítico aplicado a la tecnología</li>
+                <li>Análisis de riesgos en entornos digitales complejos</li>
+                <li>Diseño de marcos legales ejecutables</li>
+                <li>Auditoria y gobernanza de sistemas de IA</li>
+              </ul>
+              <p>
+                Me especializo en:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Regulación y cumplimiento en Inteligencia Artificial</li>
+                <li>Auditoria de algoritmos y mitigación de riesgos</li>
+                <li>Implementación jurídica de Smart Contracts</li>
+                <li>Estructuración legal de modelos basados en Blockchain</li>
+              </ul>
+              <p>
+                No interpreto la tecnología como tendencia, sino como infraestructura jurídica del nuevo sistema económico.
+              </p>
+              <p>
+                Por eso, mi trabajo no es solo asesorar, sino anticipar escenarios, reducir incertidumbre y transformar innovación en seguridad jurídica real y ejecutable.
+              </p>
+              <p>
+                Acompaño a empresas, gobiernos y proyectos que buscan liderar en la nueva economía digital.
               </p>
             </div>
-
-            {/* Quote */}
-            <blockquote className="mt-10 pl-6 border-l-2 border-gold">
-              <p className="text-xl italic text-gray-300 font-serif">
-                "La justicia del siglo XXI debe ser inteligente, accesible y transparente.
-                Nosotros la construimos."
-              </p>
-              <footer className="mt-4 text-gold">
-                — Joana Del Fabro
-              </footer>
-            </blockquote>
           </div>
 
           {/* Right Content - Stats */}

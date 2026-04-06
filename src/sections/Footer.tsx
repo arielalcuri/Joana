@@ -10,7 +10,7 @@ const footerLinks = {
     { label: 'Trazabilidad', href: '/servicio/trazabilidad' },
   ],
   empresa: [
-    { label: 'Sobre Nosotros', href: '#nosotros' },
+    { label: '¿Quién Soy?', href: '#nosotros' },
     { label: 'Equipo', href: '#nosotros' },
     { label: 'Carreras', href: '#' },
     { label: 'Blog', href: '#' },
