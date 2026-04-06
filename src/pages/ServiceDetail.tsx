@@ -2,9 +2,9 @@ import { ArrowLeft, Workflow, Scale, CheckCircle2, BarChart3, Database, Shield, 
 import { useEffect } from 'react';
 import { TrackingPreview } from '@/components/TrackingPreview';
 import { TokenizationPreview } from '@/components/TokenizationPreview';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom'; // Assuming useParams and Link are imported from react-router-dom
-import { Button } from '@/components/ui/button'; // Assuming Button is imported from a UI library
+import { Contact } from '@/sections/Contact';
+import { useParams, Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const serviceData = {
     'evaluacion-legal': {
@@ -152,11 +152,12 @@ export function ServiceDetail() {
                         <p className="text-gray-400 leading-relaxed mb-6">
                             {service.fullContent}
                         </p>
-                        <Link to="/#contacto">
-                            <Button className="w-full bg-gold text-black hover:bg-gold-light">
-                                {(service as any).ctaText || 'Iniciar Consulta Técnica'}
-                            </Button>
-                        </Link>
+                        <Button 
+                            className="w-full bg-gold text-black hover:bg-gold-light" 
+                            onClick={(e) => { e.preventDefault(); document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }); }}
+                        >
+                            {(service as any).ctaText || 'Iniciar Consulta Técnica'}
+                        </Button>
                     </div>
                 </div>
 
@@ -189,13 +190,18 @@ export function ServiceDetail() {
                         de soluciones disruptivas.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link to="/#contacto">
-                            <Button size="lg" className="bg-gold text-black px-8">Iniciar Consulta Estratégica</Button>
-                        </Link>
+                        <Button 
+                            size="lg" 
+                            className="bg-gold text-black px-8" 
+                            onClick={(e) => { e.preventDefault(); document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }); }}
+                        >
+                            Iniciar Consulta Estratégica
+                        </Button>
                         <Button size="lg" variant="outline" className="border-gold text-gold px-8 italic">Costo bonificable del proyecto final</Button>
                     </div>
                 </div>
             </div>
+            <Contact />
         </div>
     );
 }
