@@ -154,8 +154,7 @@ export function ServiceDetail() {
                         </p>
                         <Link to="/#contacto">
                             <Button className="w-full bg-gold text-black hover:bg-gold-light">
-                                // @ts-ignore
-                                {service.ctaText || 'Iniciar Consulta Técnica'}
+                                {(service as any).ctaText || 'Iniciar Consulta Técnica'}
                             </Button>
                         </Link>
                     </div>
