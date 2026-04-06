@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, MapPin, Send, Linkedin, CreditCard, Wallet } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin, Instagram, CreditCard, Wallet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { MercadoPagoPayment } from '@/components/MercadoPagoPayment';
 import { supabase } from '@/supabase';
@@ -178,7 +178,15 @@ export function Contact() {
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
-
+                <a
+                  href="https://www.instagram.com/joadelfa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-xl border border-gold/20 text-gold hover:bg-gold/10 hover:border-gold/40 transition-all"
+                  title="Instagram"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
               </div>
             </div>
           </div>

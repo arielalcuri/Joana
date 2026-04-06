@@ -60,6 +60,7 @@ export function Hero() {
             variant="metallic"
             size="lg"
             className="group px-8 py-6 text-lg font-medium transition-all duration-300"
+            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Agendar consulta
           </Button>
@@ -67,6 +68,7 @@ export function Hero() {
             variant="metallic"
             size="lg"
             className="group px-8 py-6 text-lg font-medium transition-all duration-300"
+            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Evaluar Proyecto
           </Button>

@@ -116,6 +116,7 @@ export function Navigation() {
             <Button
               variant="metallic"
               className="transition-all duration-300"
+              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Consulta Estratégica
             </Button>
@@ -174,6 +175,10 @@ export function Navigation() {
                   <Button
                     variant="metallic"
                     className="w-full"
+                    onClick={() => {
+                      setIsOpen(false);
+                      document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                   >
                     Consulta Estratégica
                   </Button>
