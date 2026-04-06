@@ -62,7 +62,7 @@ export function Hero() {
             className="group px-8 py-6 text-lg font-medium transition-all duration-300"
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Agendar consulta
+            Agendar sesión estratégica
           </Button>
           <Button
             variant="metallic"

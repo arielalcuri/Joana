@@ -25,7 +25,8 @@ const navLinks = [
   },
   { label: 'Eventos', href: '/#eventos' },
   { label: '¿Quién soy?', href: '/#nosotros' },
-  { label: 'Contacto', href: '/#contacto' },
+  { label: '¿Por qué trabajar conmigo?', href: '/#por-que-conmigo' },
+  { label: 'Evaluar mi proyecto', href: '/#contacto' },
 ];
 
 export function Navigation() {
